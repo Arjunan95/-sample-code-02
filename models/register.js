@@ -1,4 +1,3 @@
-
 'use strict';
 
 const mongoose = require('mongoose');
@@ -6,20 +5,15 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const registerpageSchema = mongoose.Schema({
-
-    firstname: String,
-    lastname: String, 
-    phonenumber : Number,
-    dateofbirth : String,
-    email : {
-        type: String,
-        unique: true
-    },
-    password: String,
-    retypepassword: String,
-    usertype:  String,
-    userId: String
-     
+    
+ firstname:String,
+lastname:String,
+dateofbirth:Number,
+phonenumber:Number,
+email:String,
+password:Number,
+retypepassword:Number,
+usertype:String
 });
 
 
@@ -32,4 +26,4 @@ mongoose.connect('mongodb://harini:Harini!96@ds119406.mlab.com:19406/mortgage', 
 
 
 
-module.exports = mongoose.model('register', registerpageSchema);
+module.exports = mongoose.model('user', registerpageSchema);
